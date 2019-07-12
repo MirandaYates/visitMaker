@@ -1,0 +1,39 @@
+REPORT GENERATED ON: 2018-05-16 20:00:13.927404
+
+Total number of tours taking place: 4
+Total number of visitors expected: 47
+Total number of reservations made: 8
+
+Listed reservations:
+1:
+Creation Date: 2018-04-30
+Docent: Bishop Smith
+Name: University Beta
+E-mail: tst@tst.com
+Time: 9:00am-10:00am
+Special Accommodations: 
+
+2:
+Creation Date: 2018-04-30
+Docent: Janice Wilbur
+Name: University Hotel
+E-mail: tst@tst.com
+Time: 10:00am-11:00am
+Special Accommodations: 
+
+3:
+Creation Date: 2018-04-30
+Docent: Jane Smith
+Name: University India
+E-mail: tst@tst.com
+Time: 11:00am-12:00pm
+Special Accommodations: last day of april
+
+4:
+Creation Date: 2018-05-16
+Docent: Kevin Tran
+Name: School Beta
+E-mail: tst@tst.com
+Time: 9:00am-10:00am
+Special Accommodations: 
+

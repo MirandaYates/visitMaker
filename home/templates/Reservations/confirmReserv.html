@@ -1,0 +1,53 @@
+{% load static %}
+<html>
+	{% include "univheader.html" %}
+
+	{% block content %}
+	<body class="background">
+		<div class="header2">
+			Your reservation has been added to the database.
+
+			<a href= "{% url 'reservations:send_email' pk=entry.pk %}">Send Confirmation Email</a>
+		</div>
+
+		<table>
+		<tbody>	
+			<tr>
+				<th>Name: </th>
+			    <th> {{entry.name }} </th>
+			</tr>
+			<tr>
+				<th>email: </th>
+				<th> {{entry.email }} </th>	
+			</tr>
+			<tr>
+				<th>Date: </th>
+				<th> {{entry.tour_date}} </th>
+			</tr>
+			<tr>
+				<th>Time: </th>
+				<th> {{entry.get_tour_time_display}} </th>
+			</tr>
+			<tr>
+				<th>Number Attending: </th>
+				<th> {{entry.people_number}} </th>
+			</tr>
+			<tr>
+				<th>Docent: </th>
+				<th> {{entry.docent}} </th>
+			</tr>
+			<tr>
+				<th>Special Accommodations: </th>
+				<th> {{entry.Special_Accommodations}} </th>
+			</tr>
+		</tbody>
+		</table>
+		
+		<div>
+			<a href= "{% url 'reservations:edit' pk=entry.pk %}">Edit reservation.</a>
+			<a href= "{% url 'reservations:delete' pk=entry.pk %}">Delete Reservation.</a>
+		</div>
+	</body>
+
+	{% endblock %}
+</html>

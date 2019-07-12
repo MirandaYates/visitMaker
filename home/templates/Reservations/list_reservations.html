@@ -1,0 +1,41 @@
+ <!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/display_entries.css' %}">
+{% if reservation_list %}
+  <table id="display_entries" class="display_entries">
+    <thead>
+      <tr>
+      	<th>Edit</th>
+		<th>Date</th>
+		<th>Time Slot</th>
+		<th>Organization</th>
+		<th>Number Attending</th>
+		<th>Docent</th>
+		<th>Special Accommodations</th>
+		<th>Delete</th>
+	</tr>
+    </thead>
+    <tbody>{% for entry in reservation_list %}
+      <tr>
+      	<td><a href="{% url 'reservations:edit' pk=entry.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+		<td>{{entry.tour_date}}</td>
+		<td>{{entry.get_tour_time_display}}</td>
+		<td>{{entry.name}}</td>
+		<td>{{entry.people_number}}</td>
+		<td>{{entry.docent}}</td>
+		<td>{% if entry.Special_Accommodations %}<span class="glyphicon glyphicon-ok"></span>{% endif %}</td>
+		<td><a href="{% url 'reservations:delete' pk=entry.pk %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+	  </tr>{% endfor %}
+    </tbody>
+  </table>
+  <script>
+  $(function(){
+    $("#display_entries").dataTable();
+  })
+  </script>
+{% else %}
+	<p class="text"> <span style="color: #853b23; font-size: 20px;">No reservations.</span> </p>
+{% endif %}

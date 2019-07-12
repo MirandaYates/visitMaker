@@ -1,0 +1,135 @@
+body {
+    font-family: Tahoma;
+}
+
+header {
+    text-align: center;
+    font-size: 30px;
+}
+
+#calendar {
+    width: 100%;
+}
+
+
+#calendar a {
+    color: #8e352e;
+    text-decoration: none;
+}
+
+#calendar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#calendar li {
+    display: inline-block;
+    overflow:hidden;
+    float: left;
+    width:14.2857142857%;
+    padding: 5px;
+    box-sizing:border-box;
+    border: 1px solid #ccc;
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
+
+#calendar ul.day_names {
+	width:99.7%;
+    height: 40px;
+    background: #8e352e;
+}
+
+#calendar ul.day_names li {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 20px;
+    border: none !important;
+    padding: 10px 6px;
+    color: #fff;
+    font-size: 13px;
+}
+
+#calendar .days li {
+    height: 160px;
+}
+
+#calendar .days li:hover {
+    background: #d3d3d3;
+}
+
+#calendar .date {
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 4px;
+    background: #333;
+    color: #fff;
+    width: 20px;
+    border-radius: 50%;
+    float: right;
+}
+
+#calendar .event {
+    clear: both;
+    display: block;
+    font-size: 13px;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    line-height: 14px;
+    background: #e8d7d0;
+    border: 1px solid #b5dbdc;
+    color: #af2e00;
+    text-decoration: none;
+    display: inline-flex;
+}
+
+#calendar .event-desc {
+    color: #666;
+    margin: 3px 0 7px 0;
+    text-decoration: none;
+}
+#calendar .event-time {
+    margin: 3px 7px;
+}
+
+#calendar .other_month {
+    background: #f5f5f5;
+    color: #666;
+}
+
+.calendar-wrapper #btnPrev {
+  float:left;
+  margin-bottom:20px;
+  &:before {
+    content:'\f104';
+    font-family:FontAwesome;
+    padding-right:4px;
+  }
+}
+.calendar-wrapper #btnNext {
+  float:right;
+  margin-bottom:20px;
+  &:after {
+    content:'\f105';
+    font-family:FontAwesome;
+    padding-left:4px;
+  }
+}
+.calendar-wrapper #btnPrev, #btnNext {
+  background:transparent;
+  border:none;
+  outline:none;
+  font-size:1em;
+  color:#c0c0c0;
+  cursor:pointer;
+  font-family:"Roboto Condensed", sans-serif;
+  text-transform:uppercase;
+  transition:all 0.3s ease;
+  &:hover {
+    color:rgb(40,40,59);
+    font-weight:bold;
+  }

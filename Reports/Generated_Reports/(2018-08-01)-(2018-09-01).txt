@@ -1,0 +1,15 @@
+REPORT GENERATED ON: 2018-08-30 13:24:46.325100
+
+Total number of tours taking place: 1
+Total number of visitors expected: 12
+Total number of reservations made: 1
+
+Listed reservations:
+1:
+Creation Date: 2018-08-30
+Docent: Me
+Name: Miranda Yates
+E-mail: mirandayates12@gmail.com
+Time: 11:00am-12:00pm
+Special Accommodations: Only drinks coffee
+

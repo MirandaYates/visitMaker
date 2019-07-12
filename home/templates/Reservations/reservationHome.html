@@ -1,0 +1,33 @@
+{% load static %}
+{% load reservation_tags %}
+<html>
+	{% include "univheader.html" %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/display_entries.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/calendar.css' %}">
+	<script src="{% static 'js/calendar.js' %}"></script>
+	<body class="background">
+		<div class="text">
+			<a href="{% url 'reservations:add_reservation' %}" class="btn btn-primary">
+				<span class="glyphicon glyphicon-pencil"></span> Create a new reservation </a>
+			<a href="{% url 'requests:list' %}" class="btn btn-success">
+				<span class="glyphicon glyphicon-exclamation-sign"></span> View requests </a>
+			<a href="{% url 'reservations:list' %}" class="btn btn-info">
+				<span class="glyphicon glyphicon-list-alt"></span> View all reservations </a>
+		</div>
+		<h2>Upcoming Reservations</h2>
+		{% get_future_set reservation_list as future_set %}
+		{% include 'Reservations/list_reservations.html' with reservation_list=future_set %}
+		<p><br></p>
+
+		<!-- Calendar Code -->
+		<script>
+			var dayList_url = "{% url 'reservations:day_list' '0000-11-22' %}";
+		</script>
+		<div class="calendar-wrapper">
+  			<button id="btnPrev" type="button">Previous Month</button>
+	  		<button id="btnNext" type="button">Next Month</button>
+  			<div id="divCal"></div>
+		</div>
+		<p style="font-size: 20px; text-align: right;"> <br> Click <a href= "/home/">here</a> to return to the home page. </p>
+	</body>
+</html>

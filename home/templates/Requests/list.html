@@ -1,0 +1,10 @@
+{% load static %}
+<html>
+	{% include "univheader.html" %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/display_entries.css' %}">
+	<body class="background">
+		<h2>Existing Requests</h2>
+		{% include 'Requests/list_requests.html' %}
+		<p style="font-size: 20px; text-align: right"> <br> Click <a href= "/reservation_home/">here</a> to return to the reservation home page. </p>
+	</body>
+</html>

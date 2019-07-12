@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+	{% include "univheader.html" %}
+	<body class="background">
+	<table>
+		<tbody>
+			<tr>
+				<th>Report for Dates: {{ form.start_date }} - {{ form.end_date }}</th>
+			</tr>
+			<tr>
+				<th>Number of tours taking place: </th>
+				<th>{{ form.number_of_tours }} </th>
+			</tr>
+			<tr>
+				<th>Number of visitors expected: </th>
+				<th>{{ form.number_of_visitors }} </th>
+			</tr>
+			<tr>
+				<th>Total number of reservations made: </th>
+				<th>{{ form.number_of_reservations }} </th>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

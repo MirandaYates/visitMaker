@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+	{% include "univheader.html" %}
+	<body class="background">
+		<div class="header2">
+			Please fill out a reservation request form.
+		</div>
+		<!-- posts error on bad input -->
+		{% if form.errors %}
+        	<p style="color: red;">
+            	Please correct the error{{ form.errors|pluralize }} below.
+        	</p>
+    	{% endif %}
+    	<!-- uses form fields to request input -->
+    	<form action="" method="post" novalidate>
+        	<table>
+            	{{ form.as_table }}
+        	</table>
+        	{% csrf_token %}
+        	<input name="submit" type="submit" value="Submit">
+    	</form>
+	</body>
+</html>

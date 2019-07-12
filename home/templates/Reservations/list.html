@@ -1,0 +1,11 @@
+<html>
+	{% include "univheader.html" %}
+	<body class="background">
+		<div class="text"><a href="{% url 'reservations:add_reservation' %}" class="btn btn-primary">
+		          <span class="glyphicon glyphicon-pencil"></span> Create a new reservation
+		</a></div>
+		<h2>Existing Reservations</h2>
+		{% include 'Reservations/list_reservations.html' %}
+		<p style="font-size: 20px; text-align: right"><br> Click <a href= "/reservation_home/">here</a> to return to the reservation home page. </p>
+	</body>
+</html>

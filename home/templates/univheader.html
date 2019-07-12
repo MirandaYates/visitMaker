@@ -1,0 +1,41 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+  <!-- Edit and Delete Glyphicons from Glyphicon.com -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- End of Glyphicon imports -->
+  <div class = "banner">
+      <ul class = "sub_header">
+        {% if request.user.is_superuser %}
+        <li><a href= "/register/">REGISTER</a></li>
+        <li><a href= "/manage/">MANAGE USERS</a></li>
+        <li><a href= "/logout/">LOGOUT</a></li>
+        {% elif request.user.is_authenticated %}
+        <li><a href= "/logout/">LOGOUT</a></li>
+        {% else %}
+        <li><a href= "/login/">LOGIN</a></li>
+        {% endif %}
+      </ul>
+  </div>
+  <div class="header">
+    <div>
+      <img src="{%static 'images/MOSTHistory_Web-LOGO.png' %}">
+    </div>
+    <div>
+      <ul class = "main_header">
+        <li><a href= "/home/">HOME </a> </li>
+        {% if request.user.is_authenticated %}
+        <li><a href= "/reservation_home/">RESERVATIONS</a></li>
+        <li><a href = "/report_generation/">REPORTS</a></li>
+        {% else %}
+        <li><a href= "/request_reservation">MAKE REQUEST</a></li>
+        <li><a href= "/contact_us/">CONTACT</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</head>

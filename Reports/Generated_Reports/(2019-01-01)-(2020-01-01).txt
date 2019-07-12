@@ -1,0 +1,15 @@
+REPORT GENERATED ON: 2019-07-12 14:06:24.114223
+
+Total number of tours taking place: 1
+Total number of visitors expected: 9
+Total number of reservations made: 1
+
+Listed reservations:
+1:
+Creation Date: 2019-07-12
+Docent: FakeDocent
+Name: Alpha
+E-mail: mirandayates12@gmail.com
+Time: 10:00am-11:00am
+Special Accommodations: 
+

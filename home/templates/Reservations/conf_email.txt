@@ -1,0 +1,11 @@
+MOSTHistory has recieved and confirmed your request.
+
+The reservation has been made for the following.  Please contact us if there are any errors.
+
+Organization:   {{entry.name}}
+Date:   {{entry.tour_date}}
+Time Slot:   {{entry.get_tour_time_display}}
+Number Attending:   {{entry.people_number}}
+Special Accomidations:   {{entry.Special_Accommodations}}
+
+Thank you for visiting!

@@ -1,0 +1,42 @@
+{% load static %}
+<html>
+	{% include "univheader.html" %}
+	<body class="background">
+		<div class="header2">
+			Your request has been submitted.  If there are any changes, please <a href= "/contact_us/">contact us</a>.
+		</div>
+
+		<table>
+		<tbody>	
+			<tr>
+				<th>Name:  </th>
+			    <th> {{entry.name }} </th>
+			</tr>
+			<tr>
+				<th>Email:  </th>
+				<th> {{entry.email }} </th>	
+			</tr>
+			<tr>
+				<th>Date:  </th>
+				<th> {{entry.tour_date}} </th>
+			</tr>
+			<tr>
+				<th>Time Slot:  </th>
+				<th> {{entry.get_tour_time_display}} </th>
+			</tr>
+			<tr>
+				<th>Number Attending:  </th>
+				<th> {{entry.people_number}} </th>
+			</tr>
+			<tr>
+				<th>Special Accommodations:  </th>
+				<th> {{entry.Special_Accommodations}} </th>
+			</tr>
+		</tbody>
+		</table>
+		<div class = "add">
+			Click <a href= "/home/">here</a> to return to the home page.
+		</div>
+	</body>
+
+</html>
